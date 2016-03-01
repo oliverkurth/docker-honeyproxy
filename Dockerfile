@@ -9,6 +9,7 @@ RUN apt-get -q -y install curl unzip
 RUN apt-get clean
 
 RUN cd /root && curl -O http://honeyproxy.org/download/honeyproxy-latest.zip && unzip honeyproxy-latest.zip
+RUN rm /root/honeyproxy-latest.zip
 
 ADD honeyproxy.sh /root/honeyproxy.sh
 
